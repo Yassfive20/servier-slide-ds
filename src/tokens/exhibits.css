@@ -1,0 +1,126 @@
+/* ============================================================================
+   src/tokens/exhibits.css
+   Exhibit tokens for the Servier slide design system.
+
+   Import after colors.css and typography.css in src/styles.css — everything
+   here builds on --sv-* and adds only what charts and diagrams need and the
+   existing token files don't have.
+
+   ── WHAT WAS VALIDATED ─────────────────────────────────────────────────────
+   Run against a white surface with the data-viz palette validator.
+
+   THE DECLARED --sv-chart-1..6 ORDER FAILS. Three separate reasons:
+
+     --sv-chart-3 = --sv-bleu-nuit #24226a
+         lightness 0.305, below the 0.43 mark band — reads as ink, not data.
+         It is also --sv-text, so a bar and its own axis labels would be the
+         same colour. A series slot must never share a value with a text token.
+
+     --sv-chart-5 = --sv-jaune #fdc400
+         lightness 0.848, above the 0.77 band; 1.61:1 against white.
+         It disappears on a projected slide.
+
+     --sv-chart-6 vert beside --sv-chart-5 jaune
+         normal-vision ΔE 14.9, below the 15 floor. Readers with full colour
+         vision cannot reliably separate them, before CVD is considered.
+
+   WHAT PASSES — four slots, in this order:
+
+     #f55b41 orange · #47bfd9 cyan · #9c7dcc violet · #91c461 vert
+       worst adjacent CVD ΔE 10.2 (deutan) · normal-vision ΔE 18.5
+
+   All four also clear the ALL-PAIRS gate, so scatter, bubble and small
+   multiples get the full four rather than the usual three-slot cap.
+
+   FOUR IS THE CEILING. --sv-bleu-descendu #323c8e is the closest fifth and
+   misses at lightness 0.398. A fifth series folds into "Other", facets into
+   small multiples, or splits into two exhibits. Never generate a new hue.
+
+   RELIEF RULE: cyan (2.16:1) and vert (2.04:1) sit below 3:1 on white. That
+   is permitted only because every exhibit direct-labels its values. The
+   labels are the mitigation, not decoration.
+   ============================================================================ */
+
+:root {
+
+  /* ---- Categorical series — the validated order ------------------------
+     These deliberately do NOT reuse --sv-chart-1..6. Those stay as they are
+     for any existing component that references them; new exhibits use these. */
+  --sv-ex-series-1: var(--sv-orange);   /* #f55b41 */
+  --sv-ex-series-2: var(--sv-cyan);     /* #47bfd9 */
+  --sv-ex-series-3: var(--sv-violet);   /* #9c7dcc */
+  --sv-ex-series-4: var(--sv-vert);     /* #91c461 */
+
+  /* Everything that is context rather than subject. */
+  --sv-ex-quiet: var(--sv-grey);        /* #d0d0d0 */
+
+  /* ---- Status — NEW. The brand has no reserved status palette ----------
+     Every candidate in colors.css is already a series or therapeutic-area
+     colour, and a status colour that doubles as a series colour makes both
+     meaningless. These four are chosen to sit clear of the series set.
+     They always ship with an icon and a label — never colour alone. */
+  --sv-ex-good:     #1e7d4f;
+  --sv-ex-warning:  #b8860b;
+  --sv-ex-serious:  #c2571f;
+  --sv-ex-critical: #b3261e;
+
+  /* ---- Sequential ramp — NEW ------------------------------------------
+     colors.css has three blues with a cliff between them: bleu-clair sits at
+     luminance 0.727 and bleu-descendu at 0.059, with nothing in between, so a
+     heatmap built from them has no usable midtones. Steps 200–400 are
+     interpolated along the same hue line. Verified monotonic:
+     .727 → .527 → .358 → .204 → .059 → .026                                */
+  --sv-ex-seq-100: var(--sv-bleu-clair);    /* #d4def2  1.35:1 */
+  --sv-ex-seq-200: #b6c0da;                 /*          1.82:1 */
+  --sv-ex-seq-300: #98a0c3;                 /*          2.58:1 */
+  --sv-ex-seq-400: #727aab;                 /*          4.13:1 */
+  --sv-ex-seq-500: var(--sv-bleu-descendu); /* #323c8e  9.67:1 */
+  --sv-ex-seq-600: var(--sv-bleu-nuit);     /* #24226a 13.89:1 */
+
+  /* Continuous magnitude (heatmaps, choropleths) may use the full range —
+     the lightest step means "near zero" and is allowed to recede.
+     ORDINAL scales (funnel stages, tiers, maturity levels) must start no
+     lighter than step 300, which is the first to clear 2:1. */
+
+  /* ---- Diverging — NEW -------------------------------------------------
+     Warm/cool poles that read as opposite, with a neutral midpoint that
+     reads as "nothing". Equal step count per arm.                          */
+  --sv-ex-div-neg: var(--sv-orange);
+  --sv-ex-div-mid: var(--sv-grey-light);
+  --sv-ex-div-pos: var(--sv-cyan);
+
+  /* ---- Chart chrome ---------------------------------------------------- */
+  --sv-ex-surface:  var(--sv-blanc);
+  --sv-ex-ink:      var(--sv-text);          /* titles, values */
+  --sv-ex-ink-2:    #5b5a7f;                 /* labels, legends — a lighter
+                                                step of bleu-nuit, since the
+                                                brand has no secondary ink   */
+  --sv-ex-muted:    #8f8ea6;                 /* axis ticks, footnotes        */
+  --sv-ex-grid:     var(--sv-grey-light);    /* hairline gridlines           */
+  --sv-ex-axis:     var(--sv-grey);          /* baseline — one step stronger */
+  --sv-ex-rule:     rgba(36, 34, 106, 0.12);
+
+  /* ---- Diagram surfaces ------------------------------------------------ */
+  --sv-ex-node:        var(--sv-blanc);
+  --sv-ex-node-stroke: var(--sv-grey);
+  --sv-ex-lane:        var(--sv-footer-bg);  /* #f3f7fd pale band           */
+  --sv-ex-connector:   #8f8ea6;
+  --sv-ex-legacy:      var(--sv-grey-light); /* anything being retired      */
+
+  /* ---- Exhibit type scale ---------------------------------------------
+     Floors, not suggestions. These exhibits render at 1280×720 and get
+     projected; the web-scale 11px tick labels the cards were first built
+     with are unreadable in a room.                                         */
+  --sv-ex-size-value: var(--sv-size-body);   /* 16px — direct labels        */
+  --sv-ex-size-label: var(--sv-size-body);   /* 16px — category names       */
+  --sv-ex-size-tick:  var(--sv-size-small);  /* 13px — axis ticks, FLOOR    */
+  --sv-ex-size-note:  var(--sv-size-small);  /* 13px — footnotes            */
+
+  /* ---- Mark specs as tokens -------------------------------------------
+     Scaled from the 24px cap at 880px to this 1280px canvas.               */
+  --sv-ex-bar-max: 32px;
+  --sv-ex-bar-radius: 5px;   /* rounded data-end, square at the baseline    */
+  --sv-ex-line: 2.5px;
+  --sv-ex-gap: 3px;          /* surface-colour gap between touching marks   */
+  --sv-ex-hairline: 1px;
+}
