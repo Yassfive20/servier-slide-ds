@@ -21,7 +21,7 @@ export function TimelineSlide({
   pageNumber?: number;
 }) {
   return (
-    <SlideFrame footer="minimal" pageNumber={pageNumber}>
+    <SlideFrame footer="bar" pageNumber={pageNumber}>
       {title && (
         <div style={{ position: "absolute", left: 68, top: 44, fontFamily: "var(--sv-font-heading)", fontWeight: 700, fontSize: 28, color: "var(--sv-bleu-nuit)" }}>
           {title}

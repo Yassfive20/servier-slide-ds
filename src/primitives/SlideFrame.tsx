@@ -23,7 +23,7 @@ export function SlideFrame({
   background = "#fff",
   pageNumber,
   footerTitle,
-  footer = "minimal",
+  footer = "bar",
   logoVariant = "color",
   className,
 }: SlideFrameProps) {

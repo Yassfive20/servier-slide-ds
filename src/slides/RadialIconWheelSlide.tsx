@@ -12,7 +12,7 @@ export interface WheelItem {
 /** "Graph slide" — icons and labels distributed evenly around a half-ring track. */
 export function RadialIconWheelSlide({ title, items, pageNumber }: { title: string; items: WheelItem[]; pageNumber?: number }) {
   return (
-    <SlideFrame footer="minimal" pageNumber={pageNumber}>
+    <SlideFrame footer="bar" pageNumber={pageNumber}>
       {/* Title sits above the ring rather than nested in its hollow: the ring's
           top-center items can hang a caption up to 90px above their icon, so a
           title placed inside the hollow collides with that caption depending on

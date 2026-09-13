@@ -17,7 +17,7 @@ export function TakeawaySlide({
   pageNumber?: number;
 }) {
   return (
-    <SlideFrame footer="minimal" pageNumber={pageNumber}>
+    <SlideFrame footer="bar" pageNumber={pageNumber}>
       <div style={{ position: "absolute", left: 68, top: 44, width: 420 }}>
         <ul style={{ margin: "180px 0 0", paddingLeft: 18, fontFamily: "var(--sv-font-body)", fontSize: 16, color: "var(--sv-bleu-nuit)", lineHeight: 2 }}>
           {items.map((it, i) => (

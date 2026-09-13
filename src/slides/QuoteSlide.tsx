@@ -22,7 +22,7 @@ export function QuoteSlide({
   pageNumber?: number;
 }) {
   return (
-    <SlideFrame footer="minimal" pageNumber={pageNumber}>
+    <SlideFrame footer="bar" pageNumber={pageNumber}>
       <div style={{ position: "absolute", left: 68, top: 44 }}>
         <div style={{ fontFamily: "var(--sv-font-heading)", fontWeight: 700, fontSize: 28, color: "var(--sv-bleu-nuit)" }}>{eyebrow}</div>
         {title && <div style={{ fontFamily: "var(--sv-font-heading)", fontSize: 28, color: "var(--sv-bleu-nuit)" }}>{title}</div>}

@@ -27,7 +27,7 @@ export function PercentageRingsSlide({
   pageNumber?: number;
 }) {
   return (
-    <SlideFrame footer="minimal" pageNumber={pageNumber}>
+    <SlideFrame footer="bar" pageNumber={pageNumber}>
       <div style={{ position: "absolute", left: 0, right: 0, top: 0, bottom: 0, background: panelBg }} />
       <div style={{ position: "absolute", left: 68, top: 44, right: 68 }}>
         <SlideHeading eyebrow={eyebrow} title={title} intro={intro} />

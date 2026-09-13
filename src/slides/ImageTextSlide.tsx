@@ -17,7 +17,7 @@ export function ImageTextSlide({
   pageNumber?: number;
 }) {
   return (
-    <SlideFrame footer="minimal" pageNumber={pageNumber}>
+    <SlideFrame footer="bar" pageNumber={pageNumber}>
       <div style={{ position: "absolute", left: 68, top: 60, bottom: 60, width: 440, backgroundImage: `url(${imageUrl})`, backgroundSize: "cover", backgroundPosition: "center" }} />
       <div style={{ position: "absolute", left: 560, top: 60, right: 68 }}>
         <SlideHeading eyebrow={eyebrow} title={title} />

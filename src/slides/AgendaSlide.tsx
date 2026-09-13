@@ -13,7 +13,7 @@ export function AgendaSlide({ heading = "Summary", sections, pageNumber }: { hea
   const cols: AgendaSection[][] = [[], []];
   sections.forEach((s, i) => cols[i % 2].push(s));
   return (
-    <SlideFrame footer="minimal" pageNumber={pageNumber}>
+    <SlideFrame footer="bar" pageNumber={pageNumber}>
       <div style={{ position: "absolute", left: 100, top: 60, fontFamily: "var(--sv-font-heading)", fontWeight: 700, fontSize: 32, color: "var(--sv-orange)" }}>
         {heading}
       </div>

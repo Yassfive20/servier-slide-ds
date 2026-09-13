@@ -27,7 +27,7 @@ export function TwoByTwoMatrixSlide({
 }) {
   const defaultColors = ["var(--sv-bleu-clair)", "var(--sv-vert)", "var(--sv-jaune)", "var(--sv-orange)"];
   return (
-    <SlideFrame footer="minimal" pageNumber={pageNumber}>
+    <SlideFrame footer="bar" pageNumber={pageNumber}>
       <div style={{ position: "absolute", left: 68, top: 44, right: 68 }}>
         <SlideHeading eyebrow={eyebrow} title={title} />
       </div>
