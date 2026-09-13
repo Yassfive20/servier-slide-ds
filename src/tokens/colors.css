@@ -1,0 +1,42 @@
+:root {
+  /* primary */
+  --sv-bleu-nuit: #24226a;
+  --sv-orange: #f55b41;
+  --sv-blanc: #ffffff;
+
+  /* primary tints */
+  --sv-bleu-descendu: #323c8e;
+  --sv-bleu-clair: #d4def2;
+
+  /* secondary */
+  --sv-violet: #9c7dcc;
+  --sv-jaune: #fdc400;
+  --sv-cyan: #47bfd9;
+  --sv-vert: #91c461;
+
+  /* neutrals (from PPT template color palette page) */
+  --sv-beige: #e3d8d0;
+  --sv-grey-light: #ededed;
+  --sv-taupe: #c9b8a9;
+  --sv-grey: #d0d0d0;
+  --sv-footer-bg: #f3f7fd;
+
+  /* text */
+  --sv-text: var(--sv-bleu-nuit);
+  --sv-text-on-dark: var(--sv-blanc);
+
+  /* chart series order (matches "camembert stylisé" slide) */
+  --sv-chart-1: var(--sv-orange);
+  --sv-chart-2: var(--sv-cyan);
+  --sv-chart-3: var(--sv-bleu-nuit);
+  --sv-chart-4: var(--sv-violet);
+  --sv-chart-5: var(--sv-jaune);
+  --sv-chart-6: var(--sv-vert);
+  --sv-chart-track: var(--sv-bleu-clair);
+
+  /* therapeutic area colors */
+  --sv-ta-oncologie: var(--sv-vert);
+  --sv-ta-cardio: var(--sv-orange);
+  --sv-ta-neurologie: var(--sv-cyan);
+  --sv-ta-immuno: var(--sv-violet);
+}
