@@ -28,7 +28,7 @@ export function TakeawaySlide({
       <div style={{ position: "absolute", right: 68, top: 44, width: 420 }}>
         <SlideHeading eyebrow={eyebrow} title={title ?? ""} align="left" />
       </div>
-      <div style={{ position: "absolute", right: 130, top: 190, width: 420, height: 480, backgroundImage: `url(${imageUrl})`, backgroundSize: "cover", backgroundPosition: "center" }} />
+      <div style={{ position: "absolute", right: 130, top: 280, width: 420, height: 400, backgroundImage: `url(${imageUrl})`, backgroundSize: "cover", backgroundPosition: "center" }} />
     </SlideFrame>
   );
 }

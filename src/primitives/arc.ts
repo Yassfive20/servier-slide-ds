@@ -13,6 +13,9 @@ export function annulusPath(
   startAngle: number,
   endAngle: number
 ) {
+  // A 360deg sweep is a degenerate SVG arc (start/end points coincide) - nudge
+  // just short of a full circle so it still renders as one continuous ring.
+  if (endAngle - startAngle >= 360) endAngle = startAngle + 359.99;
   const startOuter = polarToCartesian(cx, cy, outerR, startAngle);
   const endOuter = polarToCartesian(cx, cy, outerR, endAngle);
   const endInner = polarToCartesian(cx, cy, innerR, endAngle);

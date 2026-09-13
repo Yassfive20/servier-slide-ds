@@ -33,7 +33,7 @@ export function BarChartSlide({
             <Tooltip />
             <Legend />
             {keys.map((k, i) => (
-              <Bar key={k} dataKey={k} fill={SERIES_COLORS[i % SERIES_COLORS.length]} radius={[3, 3, 0, 0]} />
+              <Bar key={k} dataKey={k} fill={SERIES_COLORS[i % SERIES_COLORS.length]} radius={[3, 3, 0, 0]} isAnimationActive={false} />
             ))}
           </BarChart>
         </ResponsiveContainer>

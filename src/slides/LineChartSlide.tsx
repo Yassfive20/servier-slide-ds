@@ -33,7 +33,7 @@ export function LineChartSlide({
             <Tooltip />
             <Legend />
             {keys.map((k, i) => (
-              <Line key={k} type="monotone" dataKey={k} stroke={SERIES_COLORS[i % SERIES_COLORS.length]} strokeWidth={2.5} dot={false} />
+              <Line key={k} type="monotone" dataKey={k} stroke={SERIES_COLORS[i % SERIES_COLORS.length]} strokeWidth={2.5} dot={false} isAnimationActive={false} />
             ))}
           </LineChart>
         </ResponsiveContainer>

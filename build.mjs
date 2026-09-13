@@ -16,6 +16,7 @@ await esbuild.build({
   entryPoints: ["src/styles.css"],
   bundle: true,
   outfile: "dist/styles.css",
+  loader: { ".woff2": "dataurl" },
 });
 
 execSync("npx tsc", { stdio: "inherit" });

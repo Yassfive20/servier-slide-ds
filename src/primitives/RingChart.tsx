@@ -61,7 +61,12 @@ export function PercentageRing({
             paddingBottom: mode === "half" ? size * 0.08 : 0,
           }}
         >
-          {label}
+          {/* half mode: the label's box sits low enough to underlap the ring's own
+              band (little vertical room below a half-ring) - a white backdrop keeps
+              it legible regardless of the ring color behind it. */}
+          <span style={mode === "half" ? { background: "var(--sv-blanc)", borderRadius: 999, padding: "2px 14px" } : undefined}>
+            {label}
+          </span>
         </div>
       )}
     </div>
@@ -100,8 +105,15 @@ export function SegmentedRing({
   const total = segments.reduce((s, x) => s + x.value, 0) || 1;
   const sweep = mode === "half" ? 180 : 360;
   const start = mode === "half" ? -90 : -90 + 0; // full ring also starts at top for readability
-  const height = mode === "half" ? size * 0.62 : size;
-  const cy = size / 2;
+  // Labels sit outside the ring (labelR > outerR) and can land at any angle,
+  // including straight up/down - pad the canvas so a label there never clips
+  // the container edge, and draw everything relative to a shifted center.
+  const labelClearance = 50;
+  const labelBoxHalf = 32;
+  const padTop = showLabels ? labelClearance + labelBoxHalf : 10;
+  const padBottom = !showLabels ? 10 : mode === "full" ? labelClearance + labelBoxHalf : 20;
+  const height = (mode === "half" ? size * 0.62 : size) + padTop + padBottom;
+  const cy = size / 2 + padTop;
 
   let angle = start;
   const wedges = segments.map((seg) => {
@@ -110,18 +122,21 @@ export function SegmentedRing({
     const a1 = angle + segSweep;
     angle = a1;
     const mid = (a0 + a1) / 2;
-    const labelR = outerR + 26;
+    // Enough clearance that the label never underlaps the ring itself - a
+    // label sitting flush against the ring's edge can visually collide with
+    // a same-colored wedge (e.g. the caption text is navy, so is a segment).
+    const labelR = outerR + labelClearance;
     const lp = polarToCartesian(cx, cy, labelR, mid);
     return { ...seg, a0, a1, lp };
   });
 
   return (
     <div style={{ display: "flex", alignItems: "center", gap: 32 }}>
-      <div style={{ position: "relative", width: size + 140, height: height + 20 }}>
+      <div style={{ position: "relative", width: size + 140, height }}>
         <svg
           width={size + 140}
-          height={height + 20}
-          viewBox={`${-70} 0 ${size + 140} ${height + 20}`}
+          height={height}
+          viewBox={`${-70} 0 ${size + 140} ${height}`}
         >
           {wedges.map((w, i) => (
             <path key={i} d={annulusPath(cx, cy, outerR, innerR, w.a0, w.a1)} fill={w.color} />

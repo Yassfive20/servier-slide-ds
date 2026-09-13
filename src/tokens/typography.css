@@ -1,6 +1,6 @@
 :root {
-  --sv-font-heading: "Century Gothic", "Poppins", "Trebuchet MS", sans-serif;
-  --sv-font-body: "Century Gothic", "Poppins", "Trebuchet MS", sans-serif;
+  --sv-font-heading: "Poppins", sans-serif;
+  --sv-font-body: "Poppins", sans-serif;
 
   --sv-size-eyebrow: 15px;
   --sv-size-title: 40px;
