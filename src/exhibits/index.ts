@@ -44,3 +44,8 @@ export { ExhibitWarehouseFlow } from "./diagrams/ExhibitWarehouseFlow";
 export { ExhibitWarehouseLayout } from "./diagrams/ExhibitWarehouseLayout";
 export { ExhibitIcon, EXHIBIT_ICON_NAMES } from "./icons/ExhibitIcon";
 export type { ExhibitIconName } from "./icons/ExhibitIcon";
+export { ExhibitRulesTrigger } from "./docs/ExhibitRulesTrigger";
+export { ExhibitRulesChartPicker } from "./docs/ExhibitRulesChartPicker";
+export { ExhibitRulesDiagramPicker } from "./docs/ExhibitRulesDiagramPicker";
+export { ExhibitRulesPalette } from "./docs/ExhibitRulesPalette";
+export { ExhibitIconLibrary } from "./docs/ExhibitIconLibrary";

@@ -331,6 +331,26 @@
     "ExhibitWarehouseLayout": {
       "cardMode": "column",
       "viewport": "1280x720"
+    },
+    "ExhibitRulesTrigger": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitRulesChartPicker": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitRulesDiagramPicker": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitRulesPalette": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitIconLibrary": {
+      "cardMode": "column",
+      "viewport": "1280x720"
     }
   }
 }
