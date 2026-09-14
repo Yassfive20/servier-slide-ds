@@ -6,44 +6,331 @@
   "cssEntry": "dist/styles.css",
   "readmeHeader": ".design-sync/conventions.md",
   "overrides": {
-    "SlideFrame": { "cardMode": "column", "viewport": "1280x720" },
-    "TitleSlideCover": { "cardMode": "column", "viewport": "1280x720" },
-    "TitleSlidePhoto": { "cardMode": "column", "viewport": "1280x720" },
-    "DocumentTitleSlide": { "cardMode": "column", "viewport": "1280x720" },
-    "SectionDividerSlide": { "cardMode": "column", "viewport": "1280x720" },
-    "AgendaSlide": { "cardMode": "column", "viewport": "1280x720" },
-    "ClosingSlide": { "cardMode": "column", "viewport": "1280x720" },
-    "BulletContentSlide": { "cardMode": "column", "viewport": "1280x720" },
-    "TextSlide": { "cardMode": "column", "viewport": "1280x720" },
-    "TwoColumnTextSlide": { "cardMode": "column", "viewport": "1280x720" },
-    "IconColumnsSlide": { "cardMode": "column", "viewport": "1280x720" },
-    "ImageTextSlide": { "cardMode": "column", "viewport": "1280x720" },
-    "QuoteSlide": { "cardMode": "column", "viewport": "1280x720" },
-    "StepsSlide": { "cardMode": "column", "viewport": "1280x720" },
-    "KeyFiguresSlide": { "cardMode": "column", "viewport": "1280x720" },
-    "PercentageRingsSlide": { "cardMode": "column", "viewport": "1280x720" },
-    "PanelsSlide": { "cardMode": "column", "viewport": "1280x720" },
-    "SegmentedRingChartSlide": { "cardMode": "column", "viewport": "1280x720" },
-    "DonutLegendChartSlide": { "cardMode": "column", "viewport": "1280x720" },
-    "RadialIconWheelSlide": { "cardMode": "column", "viewport": "1280x720" },
-    "BarChartSlide": { "cardMode": "column", "viewport": "1280x720" },
-    "LineChartSlide": { "cardMode": "column", "viewport": "1280x720" },
-    "TimelineSlide": { "cardMode": "column", "viewport": "1280x720" },
-    "TakeawaySlide": { "cardMode": "column", "viewport": "1280x720" },
-    "BenchmarkingTableSlide": { "cardMode": "column", "viewport": "1280x720" },
-    "ComparisonSlide": { "cardMode": "column", "viewport": "1280x720" },
-    "TwoByTwoMatrixSlide": { "cardMode": "column", "viewport": "1280x720" },
-    "SWOTMatrixSlide": { "cardMode": "column", "viewport": "1280x720" },
-    "ProcessFlowSlide": { "cardMode": "column", "viewport": "1280x720" },
-    "OrgChartSlide": { "cardMode": "column", "viewport": "1280x720" },
-    "FunnelSlide": { "cardMode": "column", "viewport": "1280x720" },
-    "CaseStudySlide": { "cardMode": "column", "viewport": "1280x720" },
-    "TeamSlide": { "cardMode": "column", "viewport": "1280x720" },
-    "Bar": { "cardMode": "column" },
-    "Callout": { "cardMode": "column" },
-    "RadialIconRing": { "cardMode": "column" },
-    "SegmentedRing": { "cardMode": "column" },
-    "SmileHalf": { "cardMode": "column" },
-    "SmileQuarter": { "cardMode": "column" }
+    "SlideFrame": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "TitleSlideCover": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "TitleSlidePhoto": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "DocumentTitleSlide": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "SectionDividerSlide": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "AgendaSlide": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ClosingSlide": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "BulletContentSlide": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "TextSlide": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "TwoColumnTextSlide": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "IconColumnsSlide": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ImageTextSlide": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "QuoteSlide": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "StepsSlide": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "KeyFiguresSlide": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "PercentageRingsSlide": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "PanelsSlide": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "SegmentedRingChartSlide": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "DonutLegendChartSlide": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "RadialIconWheelSlide": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "BarChartSlide": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "LineChartSlide": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "TimelineSlide": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "TakeawaySlide": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "BenchmarkingTableSlide": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ComparisonSlide": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "TwoByTwoMatrixSlide": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "SWOTMatrixSlide": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ProcessFlowSlide": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "OrgChartSlide": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "FunnelSlide": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "CaseStudySlide": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "TeamSlide": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "Bar": {
+      "cardMode": "column"
+    },
+    "Callout": {
+      "cardMode": "column"
+    },
+    "RadialIconRing": {
+      "cardMode": "column"
+    },
+    "SegmentedRing": {
+      "cardMode": "column"
+    },
+    "SmileHalf": {
+      "cardMode": "column"
+    },
+    "SmileQuarter": {
+      "cardMode": "column"
+    },
+    "ExhibitBarRanked": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitBulletTarget": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitColumnGrouped": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitKpiRow": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitLineTrend": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitStacked100": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitWaterfall": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitAsisTobe": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitCapabilityMap": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitCapabilityStack": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitConsolidation": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitConvergenceStreams": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitCutoverRunbook": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitCycleLoop": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitDataObjectFlow": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitDecisionTree": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitDependencyGraph": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitDeploymentTopology": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitFunnelScope": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitHeatmapGrid": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitHubVsP2p": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitInterfaceMatrix": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitIssueTree": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitLayeredArchitecture": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitMatrix2x2": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitMaturityLadder": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitMilestoneTimeline": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitOrgGovernance": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitPhaseChevrons": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitProcessHierarchy": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitProcessLinear": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitProcessPictorial": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitPyramid": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitRaciMatrix": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitRoadmapGantt": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitRolloutWaves": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitSankeyFlow": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitSipoc": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitStakeholderNetwork": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitSwimlaneFlow": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitSystemLandscape": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitVennOverlap": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitWarehouseFlow": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    },
+    "ExhibitWarehouseLayout": {
+      "cardMode": "column",
+      "viewport": "1280x720"
+    }
   }
 }

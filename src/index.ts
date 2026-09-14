@@ -60,3 +60,6 @@ export type { FunnelStage } from "./slides/FunnelSlide";
 export { CaseStudySlide } from "./slides/CaseStudySlide";
 export { TeamSlide } from "./slides/TeamSlide";
 export type { TeamMember } from "./slides/TeamSlide";
+
+// exhibits (consulting chart/diagram reference slides)
+export * from "./exhibits";
